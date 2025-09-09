@@ -16,6 +16,19 @@ const squadre = [
 
 for (let i in squadre) {
   squadre[i].punti = Math.floor(Math.random() * 100 + 1);
-  squadre[i].falliSubiti = Math.floor(Math.random() * 500 + 1);
+  squadre[i].falliSubiti = Math.floor(Math.random() * 500 + 1); 
 }
+
 console.log(squadre);
+
+
+const nomiFalli = [];
+
+for (let i in squadre) {
+    const numFalli = squadre[i].falliSubiti;
+    const nomeSquadra = squadre[i].nome;
+    
+    nomiFalli.push({nome: nomeSquadra, falli: numFalli});
+}
+
+console.log(nomiFalli);
